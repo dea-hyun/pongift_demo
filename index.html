@@ -9,53 +9,104 @@
   <link rel="stylesheet" href="./css/default.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/sojin.css">
-  <link rel="stylesheet" href="./css/main.css">
 </head>
-<body class="no_background">
-  <header class="no_position">
-    <div class="hd_title">
-      <h3>
-        <span class="left_area"></span>
-         공지사항
-      </h3>
-    </div> 
-  </header>
-  <div class="page_cont notice">
-    <div class="notice_wrap">
-      <div class="acco_tit">
-       <h4>서비스 일시중단</h4>
-       <p>2022.10.01</p>
-       <span class="arrow_area"></span>
-      </div>
-      <div class="acco_cont">
-       <span>서비스 일시중단 내용</span>
-      </div>
-      <div class="acco_tit">
-        <h4>가맹점 무료체험 이벤트 공지</h4>
-        <p>2022.10.01</p>
-        <span class="arrow_area"></span>
-      </div>
-      <div class="acco_cont">
-       <span>가맹점 무료체험 이벤트 공지 내용</span>
-      </div>
-      <div class="acco_tit">
-       <h4>첫 이벤트 쿠폰 증정</h4>
-       <p>2022.10.01</p>
-       <span class="arrow_area"></span>
-      </div>
-      <div class="acco_cont">
-       <span>첫 이벤트 쿠폰 증정 내용</span>
+<body>
+  <div class="page_wrap">
+    <div class="search_box">
+      <input type="text" placeholder="브랜드명 또는 상품명 검색">
+      <button></button>
+    </div>
+    <h3 class="dm_main_h3">카테고리</h3>
+    <ul class="category_area clearfix">
+      <li>
+        <select name="" id="">
+          <option value="">전체</option>
+        </select>
+      </li>
+      <li>
+        <select name="" id="">
+          <option value="">대분류</option>
+        </select>
+      </li>
+      <li>
+        <select name="" id="">
+          <option value="">중분류</option>
+        </select>
+      </li>
+      <li>
+        <select name="" id="">
+          <option value="">소분류</option>
+        </select>
+      </li>
+    </ul>
+    <div class="search_result">
+      <h3 class="dm_main_h3">총 351개 <button></button></h3>
+      <ul class="clearfix">
+        <li>
+          <a href="">
+            <div class="goods_info_wrap">
+              <div class="gd_img_wrap"><img src="img/img_box.png" alt=""></div>
+              <div class="gd_info">
+                <p class="gd_brand">뚜레주르</p>
+                <h4 class="gd_title">바닐라 크로와상</h4>
+                <div class="gd_price">
+                  <span class="gd_percentage">15%</span>
+                  <span class="gd_real_price">6300원</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <div class="goods_info_wrap">
+              <div class="gd_img_wrap"><img src="img/img_box.png" alt=""></div>
+              <div class="gd_info">
+                <p class="gd_brand">파리바게트</p>
+                <h4 class="gd_title">우유식빵</h4>
+                <div class="gd_price">
+                  <span class="gd_percentage">15%</span>
+                  <span class="gd_real_price">7200원</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <div class="goods_info_wrap">
+              <div class="gd_img_wrap"><img src="img/img_box.png" alt=""></div>
+              <div class="gd_info">
+                <p class="gd_brand">던킨도넛</p>
+                <h4 class="gd_title">초코캬라멜빵</h4>
+                <div class="gd_price">
+                  <span class="gd_percentage">15%</span>
+                  <span class="gd_real_price">5500원</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <div class="goods_info_wrap">
+              <div class="gd_img_wrap"><img src="img/img_box.png" alt=""></div>
+              <div class="gd_info">
+                <p class="gd_brand">프렌치빌</p>
+                <h4 class="gd_title">크로와상</h4>
+                <div class="gd_price">
+                  <span class="gd_percentage">15%</span>
+                  <span class="gd_real_price">4200원</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+      <div class="more_btn_area">
+        <button class="purple_btn btn">더보기</button>
       </div>
     </div>
-
-    
   </div>
-  <script>
-    $(".acco_tit").click(function() {
-      $(this).next(".acco_cont").stop().slideToggle(300);
-      $(this).toggleClass('on').siblings().removeClass('on');
-      $(this).next(".acco_cont").siblings(".acco_cont").slideUp(300); // 1개씩 펼치기
-    });
-  </script>
 </body>
 </html>
