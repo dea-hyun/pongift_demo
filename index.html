@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="./css/default.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/sojin.css">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body class="no_background">
+  <header class="no_position">
+    <div class="hd_title">
+      <h3>
+        <span class="left_area"></span>
+         공지사항
+      </h3>
+    </div> 
+  </header>
+  <div class="page_cont notice">
+    <div class="notice_wrap">
+      <div class="acco_tit">
+       <h4>서비스 일시중단</h4>
+       <p>2022.10.01</p>
+       <span class="arrow_area"></span>
+      </div>
+      <div class="acco_cont">
+       <span>서비스 일시중단 내용</span>
+      </div>
+      <div class="acco_tit">
+        <h4>가맹점 무료체험 이벤트 공지</h4>
+        <p>2022.10.01</p>
+        <span class="arrow_area"></span>
+      </div>
+      <div class="acco_cont">
+       <span>가맹점 무료체험 이벤트 공지 내용</span>
+      </div>
+      <div class="acco_tit">
+       <h4>첫 이벤트 쿠폰 증정</h4>
+       <p>2022.10.01</p>
+       <span class="arrow_area"></span>
+      </div>
+      <div class="acco_cont">
+       <span>첫 이벤트 쿠폰 증정 내용</span>
+      </div>
+    </div>
+
+    
+  </div>
+  <script>
+    $(".acco_tit").click(function() {
+      $(this).next(".acco_cont").stop().slideToggle(300);
+      $(this).toggleClass('on').siblings().removeClass('on');
+      $(this).next(".acco_cont").siblings(".acco_cont").slideUp(300); // 1개씩 펼치기
+    });
+  </script>
+</body>
+</html>
