@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="./css/default.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/sojin.css">
+</head>
+<body>
+  <div class="mini_head">
+    <span class="left_area"></span>
+    상품상세
+  </div>
+  <div class="page_wrap dp_wrap">
+    <div class="dp_img_wrap">
+      <img src="img/dp_prod_img.png" alt="">
+    </div>
+    <div class="prod_info">
+      <div class="btn_area">
+        <span class="heart"></span>
+        <span class="share"></span>
+      </div>
+      <p class="brand_name">스타벅스</p>
+      <h4>아메리카노 Tall Size</h4>
+      <div class="prod_price">
+        <p class="price_before"><span>4,400원</span></p>
+        <p class="price_after"><span class="percent">10%</span>4,000원</p>
+      </div>
+      <div class="prod_option">
+        <table>
+          <tr>
+            <th>유효기간</th>
+            <td>
+              <input type="date" name="" id=""> ~ <input type="date" name="" id="">
+            </td>
+          </tr>
+          <tr>
+            <th>사용처</th>
+            <td>스타벅스 서울 시청 소공점</td>
+          </tr>
+          <tr>
+            <th>주문 수량<br>(최대 10개)</th>
+            <td>
+              <input type='button' onclick='count("minus")' value='-' class="btn_num_plmi"/>
+              <span id='result'>0</span>
+              <input type='button' onclick='count("plus")' value='+' class="btn_num_plmi"/>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="prod_detail">
+        <h3>상품설명</h3>
+        <div><p>상품 상세 정보 표시<br><br>(별도 이미지 적용)</p></div>
+      </div>
+    </div>
+    <a href="order_detail.html" class="bg_purple_btn btn go_gift">선물하기</a>
+  </div>
+  </div>
+
+  <script>
+    function count(type)  {
+      // 결과를 표시할 element
+      const resultElement = document.getElementById('result');
+      
+      // 현재 화면에 표시된 값
+      let number = resultElement.innerText;
+      
+      // 더하기/빼기
+      if(type === 'plus') {
+        number = parseInt(number) + 1;
+      }else if(type === 'minus')  {
+        number = parseInt(number) - 1;
+      }
+      
+      // 결과 출력
+      resultElement.innerText = number;
+    }
+  </script>
+</body>
+</html>
