@@ -18,15 +18,30 @@
   <div class="page_wrap">
     <div class="giftod_area">
       <h3 class="title_for_h3">보내는 분</h3>
-      <ul class="clearfix .send_info">
+      <ul class="clearfix send_info">
         <li><input type="text" placeholder="이름"></li>
         <li><input type="text" placeholder="휴대전화번호입력"></li>
       </ul>
     </div>
 
 
-    <div class="giftod_area">
-      <h3 class="title_for_h3">받는 분</h3>
+    <div class="giftod_area received">
+      <h3 class="title_for_h3">
+        받는 분 
+        <label for="same_send">
+          <input type="checkbox" name="" id="same_send" class="custom_chk"> 보내는 분과 같음
+        </label>
+      </h3>
+      <div class="contact_area">
+        <ul class="contact_area_box">
+          <li><input type="text" name="txt" placeholder="이름"></li>
+          <li><input type="text" name="txt" placeholder="연락처"></li>
+          <li><input type="button" class="btnRemove minus_img"></li>
+        </ul>
+      </div>
+      <p>* 최대 5명까지 입력 가능</p>
+      <button class="btnAdd btn purple_btn">+ 직접입력</button>
+      <button class="btn purple_btn">+ 연락처</button>
     </div>
 
     <div class="giftod_area">
@@ -47,12 +62,26 @@
       </table>
     </div>
 
-    <div class="giftod_area">
+    <div class="giftod_area all_payment">
       <h3 class="title_for_h3">주문/결제금액</h3>
       <p>총 결제 금액: <strong>98,500</strong>원</p>
     </div>
     <a href="order_detail.html" class="purple_btn btn gift_order">보내기</a>
   </div>
+
+
+  <script>
+    $(document).ready (function () {                
+    $('.btnAdd').click (function () {                                        
+      $('.contact_area').append (                        
+          '<ul class="contact_area_box"><li><input type="text" name="txt" placeholder="이름"></li><li><input type="text" name="txt" placeholder="연락처"></li><li><input type="button" class="btnRemove minus_img"></li></ul>'                    
+      ); // end append                            
+      $('.btnRemove').on('click', function () { 
+        $(this).parents(".contact_area_box").remove();
+      });
+      }); // end click                                            
+    }); // end ready
+  </script>
 
   <script>
     function count(type)  {
